@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+header {
+	display: block;
+	height: 15vh;
+	overflow: auto;
+	background-color: pink;
+	color: red;
+	font-size: 28px;
+
+}
+
+.container {
+	height: 95vh;
+	display: flex;
+	max-width: 100%;
+}
+
+pre {
+	background-color: #f8f8f8;
+	position: relative;
+}
+
+pre, textarea {
+	width: 50%;
+	font-family: sans-serif;
+	font-size: 28px;
+	margin: 0;
+	padding: 10px;
+	color: #222;
+	white-space: pre-wrap;
+}
+
+textarea: focus {
+	outline: 0		
+}
