@@ -6,7 +6,7 @@ class App extends Component {
 	constructor() {
 		super();
 		this.state = {
-			input: '/* add your jsx here */',
+			input: '',
 			output: '',
 			err: '',
 		}
@@ -17,7 +17,7 @@ class App extends Component {
 
 		try{
 			this.setState({
-				output: window.Babel.transform(code, {presets: ['es2015', 'react']}).code,
+				output: window.Babel.transform(code, {presets: ['es2015', 'react', 'stage-0']}).code,
 				err: ''
 			})	
 		}
@@ -47,6 +47,7 @@ class App extends Component {
 					onChange={this.update.bind(this)}
 					defaultValue={this.state.input}
 					onKeyDown={this.enableTab.bind(this)}
+					placeholder='/* Add your code here */'
 					ref={(textarea) => {this.textarea = textarea;}}/>
 					<pre>
 						{this.state.output}
